@@ -1,6 +1,6 @@
 # starter_qa
 
-Pré-requisitos: instalação de VS Code e Nodejs, usuário/conta do Github configurado
+Pré-requisitos: instalação de VS Code e Nodejs, usuário/conta do Github configurado 
 
 1- No VS Code, abra um terminal (caso não nenhum esteja aberto)
     Menu superior > Terminal > New Terminal
