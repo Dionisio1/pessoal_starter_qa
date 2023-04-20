@@ -16,4 +16,5 @@ Pré-requisitos: instalação de VS Code e Nodejs, usuário/conta do Github conf
 
     Clique em E2E Testing > Start E2E Testin in Chrome > googleSearch.feature
 
-
+Feature AutomationExercice para o site -> https://automationexercise.com/
+Feature Automation_test para o site    -> https://demo.automationtesting.in/Register.html
