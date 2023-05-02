@@ -4,9 +4,9 @@ Feature: E-commerce Automation exercice
 
 Scenario: Register User
     Given Que esteja na home page
-    When Clicar em signup
+    When Clicar em signupLogin
     And Informar nome e endereço de e-mail
-    And clicar em signup
+    And clicar em botão signup
     And Preencher dados de tratamento
     And Preencher dados de Nome
     And Preencher dados de senha
@@ -16,3 +16,4 @@ Scenario: Register User
     And Clicar em Criar conta
     And Verificar se o usuario esta logado
     Then Apagar conta do usuario
+
