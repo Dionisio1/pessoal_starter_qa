@@ -1,4 +1,6 @@
 /// <reference types="Cypress"/>
+import dataLogin from "../../../fixtures/dataLogin.json"
+import mensages  from "../../../fixtures/mensages.json"
 
 const elLogin = require('./elements').ELEMENTS
 
@@ -9,23 +11,23 @@ class Login {
         cy.get(elLogin.formSignupLogin).should("be.visible");
     };
     loginWrongNameEmail() {
-        cy.get(elLogin.fieldLoginEmail).click().type('dionisio.soares.errado@acct.global');
-        cy.get(elLogin.fieldLoginPasswd).click().type('123456');
+        cy.get(elLogin.fieldLoginEmail).click().type(dataLogin.failEmail);
+        cy.get(elLogin.fieldLoginPasswd).click().type(dataLogin.correctPassword);
         cy.get(elLogin.btnLogin).click();
     };
     loginNameEmail() {
-        cy.get(elLogin.fieldLoginEmail).click().type('dionisio.soares.certo@acct.global');
-        cy.get(elLogin.fieldLoginPasswd).click().type('123456');
+        cy.get(elLogin.fieldLoginEmail).click().type(dataLogin.correctEmail);
+        cy.get(elLogin.fieldLoginPasswd).click().type(dataLogin.correctPassword);
         cy.get(elLogin.btnLogin).click();
     };
 
     failMsgSignup() {
-        cy.get(elLogin.fieldMsgSignup).should('have.text', 'Your email or password is incorrect!');
+        cy.get(elLogin.fieldMsgSignup).should('have.text', mensages.failMsgSignup);
     };
 
     signupNameEmail() {
         cy.get(elLogin.fieldSignupName).click().type('Dio Teste');
-        cy.get(elLogin.fieldSignupEmail).click().type("dionisio.soares.certo@acct.global");
+        cy.get(elLogin.fieldSignupEmail).click().type(dataLogin.correctEmail);
     };
 
     clickBtnSignupLogin() {
