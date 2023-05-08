@@ -1,6 +1,7 @@
 import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
 import Login from "../Pages/Login"
 
+
 //----------------- Google search -------------------------
 Given("I access google page", () => {
     cy.visit("https://www.google.com.br/");
@@ -55,10 +56,6 @@ When(/^Preencher dados de Nome$/, () => {
 	Login.FormSignupName(); 
 });
 
-function FormSignupPassword() {
-    cy.get(fieldFormPasswordSignup).click().type('123456');
-}
-
 When(/^Preencher dados de senha$/, () => {
 	Login.FormSignupPassword();
 });
@@ -82,12 +79,6 @@ When(/^Clicar em Criar conta$/, () => {
 When(/^Verificar se o usuario esta logado$/, () => {
     Login.isUserLogged();
 });
-
-function deleteAccount() {
-	cy.get(btnDeleteAccount).click();
-    cy.get(msgActionAccount).should('have.text', 'Account Deleted!');
-    cy.get(btnContinue).click();    
-};
 
 Then(/^Apagar conta do usuario$/, () => {
     Login.deleteAccount();
@@ -113,3 +104,29 @@ When(/^tiver uma conta criada$/, () => {
 Then(/^logar na conta$/, () => {
 	Login.loginNameEmail();
 });
+
+
+When(/^Fazer Loggout$/, () => {
+    Login.logoutAccount();
+});
+
+
+When(/^Loggout deve ter sido realizado$/, () => {
+	Login.validateLoggout();
+});
+
+When(/^criar uma conta ja existente para o email$/, () => {
+    Login.clickBtnSignupLogin();
+    Login.signupNameEmail();
+    Login.clickBtnSignup();
+});
+
+
+When(/^Apresentará erro que email ja é cadastrado$/, () => {
+	Login.validateMsgExistingAccount();
+});
+
+
+
+
+

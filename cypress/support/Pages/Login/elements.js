@@ -17,7 +17,7 @@ export const ELEMENTS = {
     fieldFormMonthBirthSignup   : '[data-qa="months"]'                      ,
     fieldFormYearBirthSignup    : '[data-qa="years"]'                       ,
     fieldFormNewsletterSignup   : '#newsletter'                             ,
-    fieldFormOptionSignup       :  '#optin'                                 ,
+    fieldFormOptionSignup       : '#optin'                                  ,
     fieldFormFirstName          : '[data-qa="first_name"]'                  ,
     fieldFormLastName           : '[data-qa="last_name"]'                   ,
     fieldFormCompany            : '[data-qa="company"]'                     ,
@@ -33,5 +33,7 @@ export const ELEMENTS = {
     btnContinue                 : '[data-qa="continue-button"]'             ,
     btnLogout                   : '.shop-menu > .nav > :nth-child(4) > a'   ,
     avatarLogged                : ':nth-child(10) > a'                      ,
-    btnDeleteAccount            : '.shop-menu > .nav > :nth-child(5) > a'
+    btnDeleteAccount            : '.shop-menu > .nav > :nth-child(5) > a'   ,
+    fieldMsgExistEmail          : '.signup-form > form > p'
+    
 }

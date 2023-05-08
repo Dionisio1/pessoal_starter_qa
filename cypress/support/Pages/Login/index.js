@@ -96,7 +96,17 @@ class Login {
         cy.get(elLogin.btnLogout).click();
     };
 
+    validateLoggout(){
+        cy.get(elLogin.clickBtnSignupLogin).should("have.text", "Signup / Login");
+    }
 
+    validateMsgExistingAccount(){
+        cy.wait(2000);
+        // cy.get('.signup-form > form > p').should('be.visible')
+        cy.get(elLogin.fieldMsgExistEmail).should('be.visible');
+        // cy.get('.signup-form > form > p').should('have.text', mensages.failMsgCreateAccount)
+        cy.get(elLogin.fieldMsgExistEmail).should('have.text', mensages.failMsgCreateAccount)
+    }
 };
 
 

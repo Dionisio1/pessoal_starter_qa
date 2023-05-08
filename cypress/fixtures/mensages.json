@@ -1,3 +1,4 @@
 {
-   "failMsgSignup"  : "Your email or password is incorrect!" 
+   "failMsgSignup"         : "Your email or password is incorrect!"      ,
+   "failMsgCreateAccount"  : "Email Address already exist!"
 }
