@@ -2,11 +2,10 @@
 import dataLogin            from "../../../fixtures/dataLogin.json"
 import formularioLogin      from "../../../fixtures/formularioLogin.json"
 import formularioContact    from "../../../fixtures/formularioContact.json"
-import Login from "../Login/elements";
 
 
 const elContact = require('./elements').ELEMENTS
-
+const elLogin   = require('../Login/elements').ELEMENTS
 class Contact {
 
     contactUs(){
@@ -21,7 +20,6 @@ class Contact {
         cy.get(elContact.fieldFormSubjectContact).click().type(formularioContact.subjectTitle);
         cy.get(elContact.fieldFormMensageContact).click().type(formularioContact.mensageContact);
         cy.get(elContact.fieldAtachment).selectFile('cypress/anexos/boasVindas.png')
-
     }    
 
     clickBtnSubmitContact(){
@@ -32,8 +30,7 @@ class Contact {
 
     clickBtnHomeContact(){
         cy.get(elContact.btnHomeContact).click()
-        // cy.get(elLogin.carrouselhome).should('be.visible')
-
+        cy.get(elLogin.carrouselhome).should('be.visible')
     }
 
 

@@ -43,7 +43,7 @@ Feature: Login Tests
         And     Apresentará erro que email ja é cadastrado
         And     logar na conta 
         Then    Apagar conta do usuario       
-
+@focus 
     Scenario: [CT6]: Contact Us Form
         Given   Que esteja na home page
         When    Clicar no botão Contact Us
