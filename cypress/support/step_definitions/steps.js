@@ -1,23 +1,24 @@
 import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
 import Login from "../Pages/Login"
+import Contact from "../Pages/Contact";
 
 
-//----------------- Google search -------------------------
-Given("I access google page", () => {
+//--------------------------- Google search -------------------------
+Given("I access google page", () => { 
     cy.visit("https://www.google.com.br/");
 })
 
 When("I search for Grupo Quality", () => {
     cy.get('[title="Pesquisar"]').type('Quality Digital{enter}')
 })
-//  ----------------- Automation Test -------------------------
+//------------------------- Automation Test -------------------------
 Given(/^Quando estiver na pagina de teste$/, () => {
 	Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
       });
     cy.visit("https://demo.automationtesting.in/Register.html");
 });
-// ----------------- Automation exercice ------------------------
+//--------------------- Automation exercice ---------------------------
 
 Given(/^Que esteja na home page$/, () => {
 	cy.visit("https://automationexercise.com");
@@ -125,6 +126,27 @@ When(/^criar uma conta ja existente para o email$/, () => {
 When(/^Apresentará erro que email ja é cadastrado$/, () => {
 	Login.validateMsgExistingAccount();
 });
+
+
+When(/^Clicar no botão Contact Us$/, () => {
+	Login.contactUs();
+});
+
+
+When(/^informar dados para contato$/, () => {
+	Login.fillFormContactUs();
+});
+
+
+When(/^clicar em submit$/, () => {
+	Contact.clickBtnSubmitContact();
+});
+
+
+When(/^clicar no botão home$/, () => {
+	Contact.clickBtnHomeContact();
+});
+
 
 
 

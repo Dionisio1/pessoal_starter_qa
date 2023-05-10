@@ -103,7 +103,21 @@ class Login {
 
     validateMsgExistingAccount(){
         cy.get(elLogin.fieldMsgExistEmail).should('be.visible');
-        cy.get(elLogin.fieldMsgExistEmail).should('have.text', mensages.failMsgCreateAccount)
+        cy.get(elLogin.fieldMsgExistEmail).should('have.text', mensages.failMsgCreateAccount);
+    }
+
+    contactUs(){
+        cy.get(elLogin.btnContactUs).click();
+        cy.get(elLogin.titleFormContacUs).should('have.text','Get In Touch');
+    }
+
+    fillFormContactUs(){
+        cy.get(elLogin.fieldFormNameContact).click()
+        .type(`${formularioLogin.adressName} ${formularioLogin.adressLastName}`);
+        cy.get(elLogin.fieldFormEmailContact).click().type(dataLogin.correctEmail);
+        cy.get(elLogin.fieldFormSubjectContact).click().type(formularioLogin.subjectTitle);
+        cy.get(elLogin.fieldFormMensageContact).click().type(formularioLogin.mensageContact);
+        cy.get(':nth-child(6) > .form-control').selectFile('cypress/anexos/boasVindas.png')
     }
 };
 
