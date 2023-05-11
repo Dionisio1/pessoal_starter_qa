@@ -1,20 +1,27 @@
-# starter_qa
+# pessoal_starter_qa
 
-Pré-requisitos: instalação de VS Code e Nodejs, usuário/conta do Github configurado 
+Projeto fake e-commerce para prática de automação no framework Cypress.
 
-1- No VS Code, abra um terminal (caso não nenhum esteja aberto)
-    Menu superior > Terminal > New Terminal
+Pré-requisitos: 
+* instalação de VS Code;
+* Nodejs V19.6.0;
+* Cypress v12.10.0;
 
-2- No terminal, escreva o comando para baixar o reposório em sua máquina
-    git clone https://github.com/jefersonQA/starter_qa.git
+Estrutura:
+Projeto Cypress com estrutura em Page Objects;
 
-3- No terminal, rode o comando para instalar o Cypress e as demais dependências utilizadas neste repositório
-    npm install
+Ambiente de testes:
+=> https://automationexercise.com/
 
-4- No terminal, rode o comando 
-    npx cypress open
+Ambiente de testes para automação futura:
+=> https://demo.automationtesting.in/Register.html
 
+Execução de testes:
+1 - Baixe o projeto;
+2 - Na pasta do projeto instale o Cypress <npm install cypress>;
+3 - Execute o comando no terminal => npx cypress open;
+4 - Execute o comando para instalar o Cypress e as demais dependências utilizadas neste repositório
+    <npm install>
+    
     Clique em E2E Testing > Start E2E Testin in Chrome > googleSearch.feature
 
-Feature AutomationExercice para o site -> https://automationexercise.com/
-Feature Automation_test para o site    -> https://demo.automationtesting.in/Register.html
