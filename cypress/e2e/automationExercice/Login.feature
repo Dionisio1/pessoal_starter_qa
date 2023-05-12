@@ -43,20 +43,3 @@ Feature: Login Tests
         And     Apresentará erro que email ja é cadastrado
         And     logar na conta 
         Then    Apagar conta do usuario       
-@focus 
-    Scenario: [CT6]: Contact Us Form
-        Given   Que esteja na home page
-        When    Clicar no botão Contact Us
-        And     informar dados para contato
-        And     clicar em submit
-        And     clicar no botão home
-        # And     clicar no modal de confirmação
-        # Then    Deverá apresentar mensagem de sucesso 
-
-        # 5. Verify 'GET IN TOUCH' is visible
-        # 6. Enter name, email, subject and message
-        # 7. Upload file
-        # 8. Click 'Submit' button
-        # 9. Click OK button
-        # 10. Verify success message 'Success! Your details have been submitted successfully.' is visible
-        # 11. Click 'Home' button and verify that landed to home page successfully

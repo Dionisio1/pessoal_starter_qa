@@ -24,6 +24,10 @@ class Contact {
 
     clickBtnSubmitContact(){
         cy.get(elContact.btnSubmitContact).click()
+        
+    }
+
+    validadeSucessfullyMsg(){
         cy.get(elContact.msgStatusContact)
         .should('have.text','Success! Your details have been submitted successfully.')
     }
