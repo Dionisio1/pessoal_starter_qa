@@ -43,3 +43,8 @@ Feature: Login Tests
         And     Apresentará erro que email ja é cadastrado
         And     logar na conta 
         Then    Apagar conta do usuario       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Dio_automation_exercice
