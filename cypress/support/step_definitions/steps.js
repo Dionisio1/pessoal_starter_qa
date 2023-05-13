@@ -138,7 +138,7 @@ When(/^informar dados para contato$/, () => {
 });
 
 
-When(/^clicar em submit$/, () => {
+Then(/^clicar em submit$/, () => {
 	Contact.clickBtnSubmitContact();
 });
 
