@@ -42,4 +42,4 @@ Feature: Login Tests
         And     criar uma conta ja existente para o email
         And     Apresentará erro que email ja é cadastrado
         And     logar na conta 
-        Then    Apagar conta do usuario       
+        Then    Apagar conta do usuario

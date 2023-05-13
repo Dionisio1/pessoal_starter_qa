@@ -1,6 +1,7 @@
 import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
 import Login from "../Pages/Login"
 import Contact from "../Pages/Contact";
+import TestCases from "../Pages/TestCases";
 
 
 //--------------------------- Google search -------------------------
@@ -153,6 +154,15 @@ When(/^clicar no botão home$/, () => {
 });
 
 
+When(/^Quando eu clicar no botão test Cases$/, () => {
+	TestCases.clickbutonTestCases()
+    
+});
+
+
+Then(/^Devo estar na pagina de test cases$/, () => {
+	TestCases.validateTestCasePage()
+});
 
 
 
