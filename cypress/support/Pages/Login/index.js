@@ -7,6 +7,7 @@ const elLogin = require('./elements').ELEMENTS
 
 class Login {
     clickLogin() {
+        cy.visit()
         cy.get(elLogin.carrouselhome).should("be.visible");
         cy.get(elLogin.btnSignupLogin).click();
         cy.get(elLogin.formSignupLogin).should("be.visible");
