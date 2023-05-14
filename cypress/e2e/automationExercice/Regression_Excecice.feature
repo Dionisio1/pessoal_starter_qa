@@ -58,3 +58,9 @@ Feature: E-commerce Automation exercice
         Given   Que esteja na home page
         When    Quando eu clicar no botão test Cases
         Then    Devo estar na pagina de test cases
+
+    Scenario: [CT8]: Verify All Products and product detail page
+        Given   Que esteja na home page
+        When    Clicar no botão Products
+        And     Clicar em view product do primeiro produto
+        Then    Os detalhes do produto deverão estar visiveis
