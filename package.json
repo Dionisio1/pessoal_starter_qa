@@ -6,5 +6,10 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "stepDefinitions": "cypress/support/step_definitions"
+  },
+  "scripts": {
+    "cy:open"     : "cypress open"                              ,
+    "cy:run"      : "cypress run --browser chrome --headless"   ,
+    "cy:run:reg"  : "cypress run --browser chrome --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature"
   }
 }

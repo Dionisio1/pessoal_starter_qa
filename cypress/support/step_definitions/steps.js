@@ -5,14 +5,7 @@ import TestCases from "../Pages/TestCases";
 import Product from "../Pages/Product";
 
 
-//--------------------------- Google search -------------------------
-Given("I access google page", () => { 
-    cy.visit("https://www.google.com.br/");
-})
 
-When("I search for Grupo Quality", () => {
-    cy.get('[title="Pesquisar"]').type('Quality Digital{enter}')
-})
 //------------------------- Automation Test -------------------------
 Given(/^Quando estiver na pagina de teste$/, () => {
 	Cypress.on('uncaught:exception', (err, runnable) => {
