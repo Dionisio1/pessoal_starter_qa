@@ -173,4 +173,19 @@ Then(/^Os detalhes do produto deverão estar visiveis$/, () => {
 
 
 
+When(/^Pesquisar por um produto determinado$/, () => {
+   Product.seachProduct();
+});
+
+
+Then(/^Devo validar que os produtos são apresentados$/, () => {
+    Product.validateSeachProducts();
+});
+
+
+
+
+
+
+
 

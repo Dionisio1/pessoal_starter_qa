@@ -19,7 +19,14 @@ class Product {
         cy.get(elProduct.txtProductCondition).should('be.visible');
         cy.get(elProduct.txtProductBrand).should('be.visible');
     }
-
+    seachProduct() {
+        cy.get(elProduct.fieldSearchProduct).type('top');
+        cy.get(elProduct.btnSeachProduct).click();
+    }
+    validateSeachProducts() {
+        cy.get(elProduct.msgSeachedProducts).should('have.text', 'Searched Products');
+        cy.get(elProduct.fieldnNameProduct).should('have.text', 'Winter Top');
+    }
 }
 
 export default new Product();

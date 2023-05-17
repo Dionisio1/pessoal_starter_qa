@@ -7,6 +7,10 @@ export const ELEMENTS = {
     txtProductPrice         : ':nth-child(5) > span'                                                ,
     txtProductAvailability  : '.product-information > :nth-child(6)'                                ,
     txtProductCondition     : '.product-information > :nth-child(7)'                                ,
-    txtProductBrand         : '.product-information > :nth-child(8)'                                
-
+    txtProductBrand         : '.product-information > :nth-child(8)'                                ,
+    fieldSearchProduct      : '#search_product'                                                     ,
+    btnSeachProduct         : '#submit_search'                                                      ,
+    msgSeachedProducts      : '.title'                                                              ,
+    fieldnNameProduct       : ':nth-child(4) > .product-image-wrapper > .single-products > .productinfo > p'
+    
 }
