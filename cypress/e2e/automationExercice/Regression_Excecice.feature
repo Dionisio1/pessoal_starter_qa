@@ -70,3 +70,10 @@ Feature: E-commerce Automation exercice
        When     Clicar no botão Products
        And      Pesquisar por um produto determinado
        Then     Devo validar que os produtos são apresentados 
+
+    Scenario: [CT10]: Verify Subscription in home page
+        Given   Que esteja na home page
+        When    scrolar a pagina ate o footer
+        And     verificar o texto Subscription
+        And     informar email no campo Subscription e clicar no botão
+        Then    receber mensagem de cadastro com sucesso
