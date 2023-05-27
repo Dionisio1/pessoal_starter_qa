@@ -1,11 +1,11 @@
 node {
     stage('passo1'){
-        echo 'script 1'
+        git 'https://github.com/Dionisio1/pessoal_starter_qa.git'
     }
-    stage('passo1'){
-        echo 'script 2'
+    stage('passo2'){
+        sh 'npm i' 
     }
-    stage('passo1'){
+    stage('passo3'){
         echo 'script 3'
     }        
 }
