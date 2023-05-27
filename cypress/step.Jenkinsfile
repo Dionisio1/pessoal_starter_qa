@@ -1,11 +1,20 @@
-node {
-    stage('Download'){
-        git branch: 'Mochawesome', url: 'https://github.com/Dionisio1/pessoal_starter_qa.git'
+pipeline {
+    agent any
+    stages{
+        stage('Download'){
+            steps{
+                git branch: 'Mochawesome', url: 'https://github.com/Dionisio1/pessoal_starter_qa.git'
+            }
+        }
+        stage('Install'){
+            steps{
+                bat 'npm i' 
+            }
+        }
+        stage('Tests'){
+            steps{
+                bat 'npm run cy:run:reg:chrome'
+            }
+        }        
     }
-    stage('Install'){
-        bat 'npm i' 
-    }
-    stage('Tests'){
-        bat 'npm run cy:run:reg:chrome'
-    }        
 }
