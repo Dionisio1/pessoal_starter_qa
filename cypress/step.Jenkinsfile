@@ -5,7 +5,7 @@ node {
     stage('Install'){
         bat 'npm i' 
     }
-    stage('passo3'){
-        echo 'script 3'
+    stage('Tests'){
+        bat 'npm run cy:run:reg:chrome'
     }        
 }
