@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    options{
+        AnsiColor('xterm')
+    }
     stages{
         stage('Download'){
             steps{
