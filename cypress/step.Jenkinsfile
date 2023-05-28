@@ -5,7 +5,7 @@ pipeline {
         ansiColor('xterm')
     }
     stages{
-        stage('Download'){
+        stage('Build'){
             steps{
                 git branch: 'Mochawesome', url: 'https://github.com/Dionisio1/pessoal_starter_qa.git'
             }
