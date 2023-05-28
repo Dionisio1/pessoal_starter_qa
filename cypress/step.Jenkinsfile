@@ -15,7 +15,7 @@ pipeline {
                 bat 'npm i' 
             }
         }
-        stage('Test'){
+        stage('Tests'){
             steps{
                 bat 'npm run cy:run:reg:chrome'
             }
