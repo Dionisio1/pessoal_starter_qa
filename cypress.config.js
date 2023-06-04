@@ -13,4 +13,7 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}"
   },
+  env:{
+    country: "US" //BR, US, DEU
+  }
 });

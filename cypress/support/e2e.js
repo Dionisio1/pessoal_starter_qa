@@ -15,7 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import '@shelex/cypress-allure-plugin'; //report allure
+import '@shelex/cypress-allure-plugin';         //report allure
 import 'cypress-mochawesome-reporter/register'; //Mochawesome report
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

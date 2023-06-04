@@ -1,8 +1,8 @@
 /// <reference types="Cypress"/>
-import dataLogin        from "../../../fixtures/dataLogin.json"
-import mensages         from "../../../fixtures/mensages.json"
-import formularioLogin  from "../../../fixtures/formularioLogin.json"
-
+import dataLogin            from "../../../fixtures/dataLogin.json"
+import mensages             from "../../../fixtures/mensages.json"
+import formularioLogin      from "../../../fixtures/formularioLogin.json"
+import formularioLoginUS    from "../../../fixtures/formularioLoginUS.json"
 const elLogin = require('./elements').ELEMENTS
 
 class Login {
@@ -63,17 +63,31 @@ class Login {
     };
 
     FormSignupAddress() {
-        cy.get(elLogin.fieldFormFirstName).click().type(formularioLogin.adressName);
-        cy.get(elLogin.fieldFormLastName).click().type(formularioLogin.adressLastName);
-        cy.get(elLogin.fieldFormCompany).click().type(formularioLogin.adressCompany);
-        cy.get(elLogin.fieldFormAddress).click().type(formularioLogin.adress);
-        cy.get(elLogin.fieldFormAddress2).click().type(formularioLogin.adress2);
-        cy.get(elLogin.fieldFormCountry).select(formularioLogin.adressCountry);
-        cy.get(elLogin.fieldFormState).click().type(formularioLogin.adressState);
-        cy.get(elLogin.fieldFormCity).click().type(formularioLogin.adressCity);
-        cy.get(elLogin.fieldFormZipcode).click().type(formularioLogin.adressZipcode);
-        cy.get(elLogin.fieldFormMobileNumber).click().type(formularioLogin.adressPhone);
-    };
+        if(Cypress.env('country')==="BR"){
+            cy.get(elLogin.fieldFormFirstName).click().type(formularioLogin.adressName);
+            cy.get(elLogin.fieldFormLastName).click().type(formularioLogin.adressLastName);
+            cy.get(elLogin.fieldFormCompany).click().type(formularioLogin.adressCompany);
+            cy.get(elLogin.fieldFormAddress).click().type(formularioLogin.adress);
+            cy.get(elLogin.fieldFormAddress2).click().type(formularioLogin.adress2);
+            cy.get(elLogin.fieldFormCountry).select(formularioLogin.adressCountry);
+            cy.get(elLogin.fieldFormState).click().type(formularioLogin.adressState);
+            cy.get(elLogin.fieldFormCity).click().type(formularioLogin.adressCity);
+            cy.get(elLogin.fieldFormZipcode).click().type(formularioLogin.adressZipcode);
+            cy.get(elLogin.fieldFormMobileNumber).click().type(formularioLogin.adressPhone);
+        }else if(Cypress.env('country')==="US"){
+            cy.get(elLogin.fieldFormFirstName).     click().type(formularioLoginUS.adressName);
+            cy.get(elLogin.fieldFormLastName).      click().type(formularioLoginUS.adressLastName);
+            cy.get(elLogin.fieldFormCompany).       click().type(formularioLoginUS.adressCompany);
+            cy.get(elLogin.fieldFormAddress).       click().type(formularioLoginUS.adress);
+            cy.get(elLogin.fieldFormAddress2).      click().type(formularioLoginUS.adress2);
+            cy.get(elLogin.fieldFormCountry).             select(formularioLoginUS.adressCountry).should("have.value", "Australia");
+            cy.get(elLogin.fieldFormState).         click().type(formularioLoginUS.adressState);
+            cy.get(elLogin.fieldFormCity).          click().type(formularioLoginUS.adressCity);
+            cy.get(elLogin.fieldFormZipcode).       click().type(formularioLoginUS.adressZipcode);
+            cy.get(elLogin.fieldFormMobileNumber).  click().type(formularioLoginUS.adressPhone);
+
+        }
+    };  
 
     createAccount() {
         cy.get(elLogin.btnCreateAccount).click();
