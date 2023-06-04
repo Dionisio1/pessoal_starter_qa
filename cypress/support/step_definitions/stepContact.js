@@ -5,6 +5,11 @@ When(/^clicar em submit$/, () => {
 });
 
 
+When(/^informar dados para contato$/, () => {
+	Contact.fillFormContactUs();
+});
+
+
 Then(/^Devo validar a mensagem de sucesso$/, () => {
 	Contact.validadeSucessfullyMsg();
 });

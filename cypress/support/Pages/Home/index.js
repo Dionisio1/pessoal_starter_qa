@@ -18,6 +18,11 @@ class Home{
     validadeMsgSucessSubscription(){
         cy.get(elHome.fieldMsgSucessSubscription).should('have.text', 'You have been successfully subscribed!');
     }
+
+    contactUs(){
+        cy.get(elHome.btnContactUs).               click();
+        cy.get(elHome.titleFormContacUs).          should('have.text','Get In Touch');
+    }    
 }
 
 export default new Home()

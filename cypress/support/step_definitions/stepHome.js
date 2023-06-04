@@ -17,3 +17,7 @@ When(/^informar email no campo Subscription e clicar no botão$/, () => {
 Then(/^receber mensagem de cadastro com sucesso$/, () => {
 	Home.validadeMsgSucessSubscription();
 });
+
+When(/^Clicar no botão Contact Us$/, () => {
+	Home.contactUs();
+});

@@ -116,6 +116,6 @@ When(/^Clicar no botão Contact Us$/, () => {
 });
 
 
-When(/^informar dados para contato$/, () => {
-	Login.fillFormContactUs();
-});
+// When(/^informar dados para contato$/, () => {
+// 	Login.fillFormContactUs();
+// });

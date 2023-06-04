@@ -1,7 +1,8 @@
 export const ELEMENTS = {
-    fieldMsgSubscrition         : '.single-widget > h2' ,
-    fieldSubscribeEmail         : '#susbscribe_email'   ,
-    btnSubscribeFooter          :   '#subscribe'        ,
-    fieldMsgSucessSubscription  : '.alert-success'
-
+    fieldMsgSubscrition         : '.single-widget > h2'                     ,
+    fieldSubscribeEmail         : '#susbscribe_email'                       ,
+    btnSubscribeFooter          :   '#subscribe'                            ,
+    fieldMsgSucessSubscription  : '.alert-success'                          ,
+    btnContactUs                : '.shop-menu > .nav > :nth-child(8) > a'   ,
+    titleFormContacUs           : 'div.contact-form > .title'               
 }
