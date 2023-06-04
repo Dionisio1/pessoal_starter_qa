@@ -1,4 +1,4 @@
-import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/steps"
+import {Given, When, Then} from "cypress-cucumber-preprocessor/steps"
 import Login from "../Pages/Login"
 
 //-------------------------- LOGIN ------------------------------------
@@ -111,11 +111,4 @@ When(/^Apresentará erro que email ja é cadastrado$/, () => {
 });
 
 
-When(/^Clicar no botão Contact Us$/, () => {
-	Login.contactUs();
-});
-
-
-// When(/^informar dados para contato$/, () => {
-// 	Login.fillFormContactUs();
-// });
+;

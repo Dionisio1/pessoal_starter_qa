@@ -1,5 +1,5 @@
 import Cart                 from "../Pages/Cart";
-import dataLogin from "../../fixtures/dataLogin.json"
+
 
 
 
