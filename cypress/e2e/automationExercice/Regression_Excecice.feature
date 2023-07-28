@@ -77,3 +77,8 @@ Feature: E-commerce Automation exercice
         And     verificar o texto Subscription
         And     informar email no campo Subscription e clicar no botão
         Then    receber mensagem de cadastro com sucesso
+
+    Scenario: [CT11]: Verify Subscription in Cart page
+        Given   Que esteja na home page 
+        When    Clicar no botão cart
+        Then    Devo enviar email para receber novidades
