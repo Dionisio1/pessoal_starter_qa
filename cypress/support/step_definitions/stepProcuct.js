@@ -21,3 +21,25 @@ When(/^Pesquisar por um produto determinado$/, () => {
 Then(/^Devo validar que os produtos são apresentados$/, () => {
     Product.validateSeachProducts();
 });
+
+
+When(/^Adicionar produto ao cart$/, () => {
+	Product.addToCart();
+});
+
+When(/^Adicionar segundo produto ao cart$/, () => {
+	Product.addSecondToCart();
+});
+
+
+When(/^Clicar no modal continue shopping$/, () => {
+    Product.clickModalContinueShopping();
+});
+
+
+Then(/^Devo validar os produtos no cart$/, () => {
+    Product.validadeQuantityAndPrice();
+});
+
+
+

@@ -11,6 +11,7 @@ class Product {
     clickbtnViewProducts() {
         cy.get(elProduct.btnViewProduct).click();
     }
+
     validateInformationProduct() {
         cy.get(elProduct.txtProductName).should('be.visible');
         cy.get(elProduct.txtProductCategory).should('be.visible');
@@ -19,13 +20,36 @@ class Product {
         cy.get(elProduct.txtProductCondition).should('be.visible');
         cy.get(elProduct.txtProductBrand).should('be.visible');
     }
+
     seachProduct() {
         cy.get(elProduct.fieldSearchProduct).type('top');
         cy.get(elProduct.btnSeachProduct).click();
     }
+
     validateSeachProducts() {
         cy.get(elProduct.msgSeachedProducts).should('have.text', 'Searched Products');
         cy.get(elProduct.fieldnNameProduct).should('have.text', 'Winter Top');
+    }
+
+    addToCart() {
+        cy.get(elProduct.btnFirstAddToCart).trigger('mouseover').click()
+    }
+
+    addSecondToCart() {
+        cy.get(elProduct.btnSecondAddToCart).trigger('mouseover').click()
+    }
+
+    clickModalContinueShopping() {
+        cy.get(elProduct.btnModalContinueShopping).click()
+    }
+
+    validadeQuantityAndPrice() {
+        cy.get(elProduct.txtProductBlueTop).should('have.text','Blue Top');
+        cy.get(elProduct.fieldQuantityBlueTop).should('have.text', '1')
+        cy.get(elProduct.txtPriceTotalBlueTop).should('have.text', 'Rs. 500')
+        cy.get(elProduct.txtProductMenTshirt).should('have.text', 'Men Tshirt');
+        cy.get(elProduct.fieldQuantityMenTshirt).should('have.text', '1')
+        cy.get(elProduct.txtPriceTotalMenTshirt).should('have.text', 'Rs. 400')    
     }
 }
 
