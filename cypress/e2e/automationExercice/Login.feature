@@ -1,5 +1,5 @@
 Feature: Login Tests
-@focus 
+
     Scenario: [CT1]: Register User
         Given   Que esteja na home page
         When    Clicar em signupLogin

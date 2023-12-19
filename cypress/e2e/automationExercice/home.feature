@@ -7,4 +7,3 @@ Feature: Home Tests
         And     informar email no campo Subscription e clicar no botão
         Then    receber mensagem de cadastro com sucesso
 
-

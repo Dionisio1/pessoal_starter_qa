@@ -35,8 +35,6 @@ export const ELEMENTS = {
     avatarLogged                : ':nth-child(10) > a'                                          ,
     btnDeleteAccount            : '.shop-menu > .nav > :nth-child(5) > a'                       ,
     fieldMsgExistEmail          : '.signup-form > form > p'                                     ,
-    btnContactUs                : '.shop-menu > .nav > :nth-child(8) > a'                       ,
-    titleFormContacUs           : 'div.contact-form > .title'                                   ,
     fieldFormNameContact        : '[data-qa="name"]'                                            ,
     fieldFormEmailContact       : '[data-qa="email"]'                                           ,
     fieldFormSubjectContact     : '[data-qa="subject"]'                                         ,

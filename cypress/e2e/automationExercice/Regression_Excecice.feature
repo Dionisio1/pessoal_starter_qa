@@ -82,3 +82,13 @@ Feature: E-commerce Automation exercice
         Given   Que esteja na home page 
         When    Clicar no botão cart
         Then    Devo enviar email para receber novidades
+
+    Scenario: [TC12]: Add Products in Cart
+        Given    Que esteja na home page
+        When     Clicar no botão Products
+        And      Adicionar produto ao cart
+        And      Clicar no modal continue shopping
+        And      Adicionar segundo produto ao cart
+        And      Clicar no modal continue shopping
+        And      Clicar no botão cart
+        Then     Devo validar os produtos no cart

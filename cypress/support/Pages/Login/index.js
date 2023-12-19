@@ -120,11 +120,6 @@ class Login {
         cy.get(elLogin.fieldMsgExistEmail).         should('have.text', mensages.failMsgCreateAccount);
     }
 
-    contactUs(){
-        cy.get(elLogin.btnContactUs).               click();
-        cy.get(elLogin.titleFormContacUs).          should('have.text','Get In Touch');
-    }
-
 };
 
 
