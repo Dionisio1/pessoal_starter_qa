@@ -20,5 +20,7 @@ export const ELEMENTS = {
     txtPriceTotalBlueTop    : '#product-1 > .cart_total > .cart_total_price'                                    ,
     txtProductMenTshirt     : '#product-2 > .cart_description > h4 > a'                                         ,
     txtPriceTotalMenTshirt  : '#product-2 > .cart_total > .cart_total_price'                                    ,
-    msgSeachedProducts      : '.title'                                                                          
+    msgSeachedProducts      : '.title'                                                                          ,
+    buttonAddToCart         : ':nth-child(5) > .btn'                                                            ,
+    fieldQuantity           : '#quantity'               
 }

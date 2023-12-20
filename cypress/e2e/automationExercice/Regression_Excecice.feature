@@ -92,3 +92,13 @@ Feature: E-commerce Automation exercice
         And      Clicar no modal continue shopping
         And      Clicar no botão cart
         Then     Devo validar os produtos no cart
+
+    Scenario: [TC13]: Verify Product quantity in Cart
+        Given   Que esteja na home page
+        When    Clicar em view product do primeiro produto
+        And     Os detalhes do produto deverão estar visiveis
+        And     adicionar 4 quantidades do produto
+        And     clicar no botão add to cart
+        And     Clicar no modal continue shopping
+        And     Clicar no botão cart
+        Then    Devo validar a quantidade de 4 itens do produto

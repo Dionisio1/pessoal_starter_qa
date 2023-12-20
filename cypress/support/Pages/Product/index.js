@@ -1,5 +1,5 @@
 const elProduct = require('./elements').ELEMENTS
-
+const elCart    = require('../Cart/elements').ELEMENTS
 
 class Product {
 
@@ -50,6 +50,19 @@ class Product {
         cy.get(elProduct.txtProductMenTshirt).should('have.text', 'Men Tshirt');
         cy.get(elProduct.fieldQuantityMenTshirt).should('have.text', '1')
         cy.get(elProduct.txtPriceTotalMenTshirt).should('have.text', 'Rs. 400')    
+    }
+
+    addQuantityProducts() {
+        cy.get(elProduct.fieldQuantity).click();
+        cy.get(elProduct.fieldQuantity).clear().type("4");
+    }
+
+    buttonAddToCart() {
+        cy.get(elProduct.buttonAddToCart).click();
+    }
+
+    validateQuantityIsFour() {
+        cy.get(elCart.fieldQuantity).should('have.text',"4")
     }
 }
 

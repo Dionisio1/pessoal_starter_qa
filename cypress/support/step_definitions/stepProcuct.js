@@ -42,4 +42,22 @@ Then(/^Devo validar os produtos no cart$/, () => {
 });
 
 
+When(/^adicionar 4 quantidades do produto$/, () => {
+	Product.addQuantityProducts();
+});
+
+
+When(/^clicar no botão add to cart$/, () => {
+	Product.buttonAddToCart();
+});
+
+
+Then(/^Devo validar a quantidade de 4 itens do produto$/, () => {
+	Product.validateQuantityIsFour();
+});
+
+
+
+
+
 
