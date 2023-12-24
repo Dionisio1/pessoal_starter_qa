@@ -111,4 +111,20 @@ When(/^Apresentará erro que email ja é cadastrado$/, () => {
 });
 
 
-;
+When(/^Criar conta$/, () => {
+    Login.clickBtnSignupLogin();
+    Login.signupNameEmail();
+    Login.clickBtnSignup();
+    Login.clickGender();
+    Login.FormSignupName();
+    Login.FormSignupPassword();
+    Login.FormSignupDateOfBirth();
+    Login.FormSignupNewsletterOtions();
+    Login.FormSignupAddress();
+    Login.createAccount();
+    Login.isUserLogged();
+});
+
+When(/^Validar conta criada$/, () => {
+	Login.isUserLogged();
+});

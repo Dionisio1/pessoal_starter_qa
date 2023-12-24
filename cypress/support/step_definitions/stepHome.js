@@ -21,3 +21,7 @@ Then(/^receber mensagem de cadastro com sucesso$/, () => {
 When(/^Clicar no botão Contact Us$/, () => {
 	Home.contactUs();
 });
+
+When(/^Clicar em add to cart$/, () => {
+	Home.HomeAddToCart();
+});

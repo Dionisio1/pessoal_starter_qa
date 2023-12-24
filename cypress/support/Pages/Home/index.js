@@ -22,7 +22,11 @@ class Home{
     contactUs(){
         cy.get(elHome.btnContactUs).               click();
         cy.get(elHome.titleFormContacUs).          should('have.text','Get In Touch');
-    }    
+    } 
+    
+    HomeAddToCart(){
+        cy.get(elHome.btnAddToCart).click()
+    }
 }
 
 export default new Home()
