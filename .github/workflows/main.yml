@@ -10,6 +10,8 @@ jobs:
   testes-e2e:
     runs-on: ubuntu-latest
 
+    steps:
+
       - name: Instalar dependências
         run: |
           npm install
