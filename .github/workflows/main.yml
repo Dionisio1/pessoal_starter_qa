@@ -21,5 +21,6 @@ jobs:
 
       - name: Executar testes Cypress
         uses: cypress-io/github-action@v5
-        command: cypress run --browser chrome --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature
+        with:
+          command: cypress run --browser chrome --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature
         
