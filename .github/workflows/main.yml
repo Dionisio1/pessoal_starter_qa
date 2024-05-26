@@ -18,10 +18,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          
+
       - name: Instalar dependências
-        run: |
-          npm i
+        uses: cypress-io/github-action@v5
 
       - name: Executar testes Cypress
         run: |
