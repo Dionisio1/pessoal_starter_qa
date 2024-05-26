@@ -12,6 +12,9 @@ jobs:
     name: Execução de testes E2E
 
     steps:
+      - name: Listando repositorio
+        run: run ls home/runner/work/pessoal_starter_qa/pessoal_starter_qa
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
