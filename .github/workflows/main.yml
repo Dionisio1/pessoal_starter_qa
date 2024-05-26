@@ -15,15 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-
       - name: Instalar dependências
-        run: npm install 
+        run: npm install
+
 
       - name: Executar testes Cypress
-        run: |
-          npm run cy:run:reg:chrome
+        uses: cypress-io/github-action@v5
+        command: cypress run --browser chrome --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature
+        
