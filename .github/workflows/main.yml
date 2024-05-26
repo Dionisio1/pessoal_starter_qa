@@ -10,10 +10,6 @@ jobs:
   testes-e2e:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
       - name: Instalar dependências
         run: |
           npm install
