@@ -15,8 +15,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: 'pessoal_starter_qa/pessoal_starter_qa'
 
       - name: Instalar dependências
         run: npm install
