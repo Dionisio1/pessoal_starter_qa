@@ -22,6 +22,6 @@ jobs:
 
       - name: Executar testes Cypress
         run: |
-        npx cypress run --spec cypress\\e2e\\automationExercice\\Regression_Excecice.feature
+        npx cypress run --spec "cypress/e2e/automationExercice/Regression_Excecice.feature"
       
         
